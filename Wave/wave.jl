@@ -6,6 +6,7 @@ using MAT
 #
 ##########################################################################
 
+# data file located at https://drive.google.com/drive/folders/12cbNIvTp78YhXtl5j6Pp2KtxBzwdJCp5?usp=sharing
 # Load the .mat file for Wave equation data, mapping wave initial condition to solution
 reader = matread("Wave/Wave_data.mat")
 
