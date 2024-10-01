@@ -55,7 +55,7 @@ rbon = RBON(15, size(U_train, 1), 9)
 rbon_fit!(rbon, U_train, V_train, y)
         
 # L2 relative test error, in distribution
-predictions = predict(rbon, U_test, y)
+predictions = rbon_predict(rbon, U_test, y)
 rel_errors = [norm(V_test[:, i] .- predictions[:, i]) / norm(V_test[:, i]) for i in 1:size(V_test, 2)]
 
 average_error = mean(rel_errors)
