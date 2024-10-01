@@ -175,7 +175,7 @@ y_ood = reader_ood["y_ood"] # domain location of solutions
 
 
 # L2 relative test error for RBON, out of distribution
-predictions_ood = predict(rbon, U_ood, y_ood)
+predictions_ood = rbon_predict(rbon, U_ood, y_ood)
 ood_rel_errors = [norm(V_ood[:, i] .- predictions_ood[:, i]) / norm(V_ood[:, i]) for i in 1:size(V_ood, 2)]
 average_error = mean(ood_rel_errors)
 standard_error = std(ood_rel_errors) / sqrt(length(rel_errors))
