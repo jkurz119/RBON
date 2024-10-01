@@ -138,10 +138,6 @@ for i in 1:size(U_test,2)
     Vfft_test[:,i] = fft(reshape(V_test[:,i],n_x,n_t))[:]
 end
 
-for i in 1:size(U_ood,2)
-    Ufft_ood[:,i] = fft(U_ood[:,i])
-    Vfft_ood[:,i] = fft(reshape(V_ood[:,i],101,241))[:]
-end
 
 # F-RBON ##########################################################
 # 8,4
