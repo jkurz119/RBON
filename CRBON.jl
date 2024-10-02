@@ -32,7 +32,7 @@ end
 
 
 #accepts 2D arrays of complex values for training and testing
-#assumes the second index is to access flattened 2D fourier functions (U[:,k] -> kth input function)
+#assumes the second index is to access flattened fourier functions (U[:,k] -> kth input function)
 #can be altered to accept arbitrary size input for larger dimensions
 function complex_fit!(rbon::ComplexRBON, U::Array{ComplexF64, 2}, V::Array{ComplexF64, 2}, y::Matrix{Float64})
 
